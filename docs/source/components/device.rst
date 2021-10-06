@@ -14,8 +14,6 @@ When you create the device in the code, firmware is uploaded together with the p
 
   # Upload the pipeline to the device
   with depthai.Device(pipeline) as device:
-    # Start the pipeline that is now on the device
-    device.startPipeline()
 
     # Input queue, to send message from the host to the device (you can recieve the message on the device with XLinkIn)
     input_q = device.getInputQueue("input_name", maxSize=4, blocking=False)
